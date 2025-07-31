@@ -138,7 +138,7 @@ const DataSolutions = () => {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">Support Response</span>
-                  <Badge>< 24 Hours</Badge>
+                  <Badge>&lt; 24 Hours</Badge>
                 </div>
               </div>
             </div>

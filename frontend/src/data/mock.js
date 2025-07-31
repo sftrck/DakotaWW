@@ -229,60 +229,8 @@ export const navigationItems = [
 export const contactInfo = {
   phone: "+1 (512) 555-0100",
   email: "info@dakotaworldwide.com",
-  address: {
-    street: "1234 Business Center Drive",
-    suite: "Suite 500",
-    city: "Austin",
-    state: "TX",
-    zip: "78701"
-  },
   hours: {
     weekdays: "8:00 AM - 6:00 PM CST",
     weekends: "Closed"
   }
 };
-
-export const officeLocations = [
-  {
-    city: "Austin, TX",
-    type: "Headquarters",
-    description: "Technology and data analytics hub",
-    address: {
-      street: "1234 Business Center Drive",
-      suite: "Suite 500",
-      city: "Austin",
-      state: "TX",
-      zip: "78701"
-    },
-    phone: "+1 (512) 555-0100",
-    email: "austin@dakotaworldwide.com"
-  },
-  {
-    city: "Minneapolis, MN",
-    type: "Regional Office",
-    description: "Midwest retail and corporate presence",
-    address: {
-      street: "2500 Corporate Center",
-      suite: "Suite 1200",
-      city: "Minneapolis",
-      state: "MN",
-      zip: "55402"
-    },
-    phone: "+1 (612) 555-0200",
-    email: "minneapolis@dakotaworldwide.com"
-  },
-  {
-    city: "Boise, ID",
-    type: "Regional Office",
-    description: "Western regional coverage and emerging markets",
-    address: {
-      street: "890 Innovation Way",
-      suite: "Suite 300",
-      city: "Boise",
-      state: "ID",
-      zip: "83702"
-    },
-    phone: "+1 (208) 555-0300",
-    email: "boise@dakotaworldwide.com"
-  }
-];

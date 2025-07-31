@@ -33,10 +33,10 @@ const About = () => {
 
   const milestones = [
     { year: "2010", event: "Founded in Austin, Texas", description: "Started with a focus on helping organizations coordinate departmental activities" },
-    { year: "2012", event: "Locus System Launch", description: "First tool for coordinating site selection with revenue management" },
-    { year: "2015", event: "Major Retail Clients", description: "Partnerships with organizations needing cross-departmental coordination" },
-    { year: "2018", event: "Synergos Partnership", description: "Data partnership to support location and competitive analysis" },
-    { year: "2020", event: "Expanded Monitoring", description: "Enhanced competitor department monitoring across all business functions" },
+    { year: "2012", event: "McDonald's Development Work", description: "Developed Quintillion computer modeling system during enterprise consulting at McDonald's" },
+    { year: "2015", event: "Major Retail Clients", description: "Expanded client base with organizations needing cross-departmental coordination" },
+    { year: "2018", event: "National Expansion", description: "Opened regional offices in Minneapolis and Boise for broader market coverage" },
+    { year: "2020", event: "Enhanced Competitor Monitoring", description: "Expanded capability to measure virtually every department of every competitor" },
     { year: "2022", event: "Comprehensive Platform", description: "Full suite of tools for coordinating organizational silo activities" },
     { year: "2024", event: "Proven Track Record", description: "500+ organizations successfully coordinating activities with Dakota tools" }
   ];

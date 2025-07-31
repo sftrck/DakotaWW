@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Badge } from '../components/ui/badge';
 import { ArrowRight, TrendingUp, Target, Users, BarChart3, Zap, Shield } from 'lucide-react';
 import { companyInfo, services, testimonials, stats } from '../data/mock';
+import QuoteComponent from '../components/QuoteComponent';
 
 const Home = () => {
   const featuredServices = services.slice(0, 3);
@@ -16,15 +17,15 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge variant="secondary" className="mb-6">
-              Enterprise Revenue Optimization
+              Organizational Coordination Solutions
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Break Down Silos,
+              Coordinate Silo Activities,
               <br />
-              <span className="text-slate-700">Maximize Revenue</span>
+              <span className="text-slate-700">Manage Revenue</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Dakota Worldwide helps organizations coordinate departmental activities and optimize revenue streams through advanced analytics, strategic consulting, and innovative business solutions.
+              We often see silos in an organization that all have an effect on revenues. Many times a department's goals are out of sync with other departments. Dakota has tools that help organizations coordinate the various silo activities and manage revenue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -33,7 +34,7 @@ const Home = () => {
                 className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-6 text-lg"
               >
                 <Link to="/contact">
-                  Schedule Consultation
+                  Coordinate Your Organization
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -44,7 +45,7 @@ const Home = () => {
                 className="border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-6 text-lg"
               >
                 <Link to="/services">
-                  Explore Services
+                  View Solutions
                 </Link>
               </Button>
             </div>
@@ -52,12 +53,19 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Bob Dylan Quote Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <QuoteComponent />
+        </div>
+      </section>
+
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center bg-white p-6 rounded-lg shadow-sm">
                 <div className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
                   {stat.number}
                 </div>
@@ -74,14 +82,14 @@ const Home = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Revenue Solutions
+              Tools for Coordinating Organizational Activities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our integrated platform combines location intelligence, pricing optimization, consumer insights, and competitive monitoring to maximize your revenue potential.
+              All activities from building a new store to investing in marketing and advertising requires clear knowledge and management of revenues. Our tools help coordinate these various departmental activities.
             </p>
           </div>
 
@@ -125,7 +133,7 @@ const Home = () => {
               className="border-slate-300 text-slate-700 hover:bg-slate-100"
             >
               <Link to="/services">
-                View All Services
+                View All Tools
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -133,15 +141,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Value Propositions */}
-      <section className="py-20 bg-white">
+      {/* Problem & Solution */}
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Dakota Worldwide?
+              The Silo Problem in Organizations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We bridge the gaps between departments, align organizational goals, and provide the tools and insights needed to optimize revenue across all channels.
+              Many times a department's goals are out of sync with other departments, affecting overall revenue performance. Dakota provides practical solutions to coordinate these activities.
             </p>
           </div>
 
@@ -150,9 +158,9 @@ const Home = () => {
               <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <BarChart3 className="h-8 w-8 text-slate-700" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Advanced Analytics</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Measure Every Department</h3>
               <p className="text-gray-600">
-                Leverage cutting-edge data science and machine learning to uncover hidden revenue opportunities and optimize business performance.
+                Dakota measures virtually every department of every competitor, providing comprehensive intelligence for coordinated decision-making.
               </p>
             </div>
 
@@ -160,9 +168,9 @@ const Home = () => {
               <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="h-8 w-8 text-slate-700" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Rapid Implementation</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Coordinate Activities</h3>
               <p className="text-gray-600">
-                Our proven methodologies and experienced team ensure quick deployment and immediate value realization for your organization.
+                Our tools help organizations coordinate the various silo activities, ensuring departments work together rather than at cross-purposes.
               </p>
             </div>
 
@@ -170,9 +178,9 @@ const Home = () => {
               <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="h-8 w-8 text-slate-700" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Results</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Manage Revenue</h3>
               <p className="text-gray-600">
-                With over 500 successful implementations and $2.3B in additional revenue generated, our track record speaks for itself.
+                From building new stores to marketing investments, every activity requires clear knowledge and management of revenues across departments.
               </p>
             </div>
           </div>
@@ -180,14 +188,14 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Client Success Stories
+              Organizations That Coordinate Activities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how Dakota Worldwide has helped organizations across industries achieve exceptional revenue growth and operational efficiency.
+              See how Dakota has helped organizations break down silos and coordinate departmental activities for better revenue management.
             </p>
           </div>
 
@@ -219,10 +227,10 @@ const Home = () => {
       <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Optimize Your Revenue?
+            Ready to Coordinate Your Organization?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join hundreds of successful organizations that have transformed their revenue operations with Dakota Worldwide's proven solutions.
+            Stop letting departmental silos hurt your revenue. Join organizations that use Dakota tools to coordinate activities and manage revenue effectively.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -231,7 +239,7 @@ const Home = () => {
               className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-6 text-lg"
             >
               <Link to="/contact">
-                Schedule Free Consultation
+                Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -242,7 +250,7 @@ const Home = () => {
               className="border-gray-300 text-white hover:bg-slate-800 px-8 py-6 text-lg"
             >
               <Link to="/tools">
-                Explore Our Technology
+                Explore Our Tools
               </Link>
             </Button>
           </div>

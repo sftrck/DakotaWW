@@ -292,18 +292,6 @@ const Contact = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start">
-                    <MapPin className="h-5 w-5 text-slate-600 mr-3 mt-1" />
-                    <div>
-                      <p className="font-medium">Headquarters</p>
-                      <p className="text-gray-600">{contactInfo.address.street}</p>
-                      <p className="text-gray-600">{contactInfo.address.suite}</p>
-                      <p className="text-gray-600">
-                        {contactInfo.address.city}, {contactInfo.address.state} {contactInfo.address.zip}
-                      </p>
-                    </div>
-                  </div>
-                  
                   <div className="flex items-center">
                     <Clock className="h-5 w-5 text-slate-600 mr-3" />
                     <div>
@@ -315,35 +303,33 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Office Locations */}
+              {/* Business Information */}
               <Card className="border-0 shadow-md">
                 <CardHeader>
-                  <CardTitle className="text-xl">Office Locations</CardTitle>
+                  <CardTitle className="text-xl">Nationwide Presence</CardTitle>
                   <CardDescription>
-                    National presence across key markets
+                    Serving organizations across all markets
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-6">
-                    {offices.map((office, index) => (
-                      <div key={index} className="border-l-4 border-slate-300 pl-4">
-                        <div className="flex items-center mb-2">
-                          <h4 className="font-semibold text-gray-900">{office.city}</h4>
-                          <Badge variant="outline" className="ml-2 text-xs">
-                            {office.type}
-                          </Badge>
-                        </div>
-                        <p className="text-sm text-gray-500 mb-2">{office.description}</p>
-                        <p className="text-sm text-gray-600 mb-1">
-                          {office.address.street}, {office.address.suite}
-                        </p>
-                        <p className="text-sm text-gray-600 mb-2">
-                          {office.address.city}, {office.address.state} {office.address.zip}
-                        </p>
-                        <p className="text-sm text-gray-600">{office.phone}</p>
-                        <p className="text-sm text-gray-600">{office.email}</p>
+                  <div className="space-y-4">
+                    <p className="text-gray-700">
+                      Dakota Worldwide serves organizations nationwide, providing revenue coordination solutions across diverse industries and markets.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-slate-400 rounded-full mr-3"></div>
+                        <span className="text-gray-700">Remote and on-site consulting available</span>
                       </div>
-                    ))}
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-slate-400 rounded-full mr-3"></div>
+                        <span className="text-gray-700">National client base across all industries</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-slate-400 rounded-full mr-3"></div>
+                        <span className="text-gray-700">Virtual collaboration and support</span>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

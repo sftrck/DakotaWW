@@ -89,7 +89,7 @@ const Home = () => {
               Tools for Coordinating Organizational Activities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              All activities from building a new store to investing in marketing and advertising requires clear knowledge and management of revenues. Our tools help coordinate these various departmental activities.
+              All activities from building a new store to investing in marketing and advertising requires clear knowledge and management of revenues. Our tools help coordinate these various departmental activities, including Quintillion - originally developed at McDonald's.
             </p>
           </div>
 

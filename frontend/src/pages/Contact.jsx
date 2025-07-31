@@ -86,7 +86,7 @@ const Contact = () => {
     }
   ];
 
-  const offices = officeLocations;
+
 
   return (
     <div className="min-h-screen">

@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Badge } from '../components/ui/badge';
 import { useToast } from '../hooks/use-toast';
 import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Calendar, Users } from 'lucide-react';
-import { contactInfo, officeLocations } from '../data/mock';
+import { contactInfo } from '../data/mock';
 
 const Contact = () => {
   const { toast } = useToast();

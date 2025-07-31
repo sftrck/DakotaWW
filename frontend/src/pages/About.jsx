@@ -5,46 +5,47 @@ import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { ArrowRight, Award, Target, Users, Lightbulb, CheckCircle } from 'lucide-react';
 import { companyInfo, teamMembers, stats } from '../data/mock';
+import QuoteComponent from '../components/QuoteComponent';
 
 const About = () => {
   const values = [
     {
       icon: Target,
-      title: "Results-Driven",
-      description: "We focus on measurable outcomes and tangible business impact for every client engagement."
+      title: "Practical Solutions",
+      description: "We provide straightforward tools that solve real departmental coordination problems affecting revenue."
     },
     {
       icon: Users,
-      title: "Collaborative Approach", 
-      description: "We work as an extension of your team, breaking down silos and fostering cross-departmental alignment."
+      title: "Coordination Focus", 
+      description: "Our primary goal is helping departments work together rather than at cross-purposes."
     },
     {
       icon: Lightbulb,
-      title: "Innovation First",
-      description: "We continuously evolve our methodologies and tools to stay ahead of industry trends and challenges."
+      title: "Clear Intelligence",
+      description: "We measure competitor activities across all departments to provide actionable business intelligence."
     },
     {
       icon: Award,
-      title: "Excellence Standard",
-      description: "We maintain the highest standards of quality in everything we do, from consulting to technology delivery."
+      title: "Proven Results",
+      description: "Organizations use our tools to successfully coordinate activities and manage revenue more effectively."
     }
   ];
 
   const milestones = [
-    { year: "2010", event: "Founded in Austin, Texas", description: "Dakota Worldwide established with vision to revolutionize revenue optimization" },
-    { year: "2012", event: "Locus System Launch", description: "First proprietary tool for site location modeling and analysis" },
-    { year: "2015", event: "Major Enterprise Clients", description: "Partnerships with Fortune 500 retailers and service companies" },
-    { year: "2018", event: "Synergos Partnership", description: "Strategic data partnership expanding our analytics capabilities" },
-    { year: "2020", event: "Cloud Platform Launch", description: "Full migration to cloud-native architecture and modern technology stack" },
-    { year: "2022", event: "Open Source Initiative", description: "Launch of open-source business systems philosophy" },
-    { year: "2024", event: "Global Expansion", description: "International operations and multi-region deployment capabilities" }
+    { year: "2010", event: "Founded in Austin, Texas", description: "Started with a focus on helping organizations coordinate departmental activities" },
+    { year: "2012", event: "Locus System Launch", description: "First tool for coordinating site selection with revenue management" },
+    { year: "2015", event: "Major Retail Clients", description: "Partnerships with organizations needing cross-departmental coordination" },
+    { year: "2018", event: "Synergos Partnership", description: "Data partnership to support location and competitive analysis" },
+    { year: "2020", event: "Expanded Monitoring", description: "Enhanced competitor department monitoring across all business functions" },
+    { year: "2022", event: "Comprehensive Platform", description: "Full suite of tools for coordinating organizational silo activities" },
+    { year: "2024", event: "Proven Track Record", description: "500+ organizations successfully coordinating activities with Dakota tools" }
   ];
 
   const awards = [
-    { title: "Best Analytics Platform", organization: "Retail Technology Awards", year: "2023" },
-    { title: "Innovation in Business Intelligence", organization: "Austin Tech Excellence", year: "2023" },
-    { title: "Top Consulting Firm", organization: "Revenue Management Institute", year: "2022" },
-    { title: "Customer Success Excellence", organization: "Business Software Review", year: "2022" }
+    { title: "Best Revenue Coordination Platform", organization: "Retail Analytics Awards", year: "2023" },
+    { title: "Innovation in Departmental Coordination", organization: "Austin Business Excellence", year: "2023" },
+    { title: "Top Business Intelligence Provider", organization: "Revenue Management Institute", year: "2022" },
+    { title: "Excellence in Organizational Solutions", organization: "Business Software Review", year: "2022" }
   ];
 
   return (
@@ -60,39 +61,52 @@ const About = () => {
               About Dakota Worldwide
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              {companyInfo.description} For over a decade, we've been helping organizations coordinate departmental activities and maximize revenue potential through innovative analytics and strategic consulting.
+              {companyInfo.description} For over a decade, we've been helping organizations solve the fundamental problem of departmental silos affecting revenue.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-16 bg-white">
+      {/* Bob Dylan Quote Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <QuoteComponent className="mb-16" />
+          
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Adapting to Organizational Change
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              In rapidly changing business environments, organizations that can coordinate their departmental activities succeed. Those with departments working in silos struggle with revenue management and fall behind.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Problem Statement */}
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Mission
+                The Silo Problem
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                To break down organizational silos that hinder revenue optimization and empower businesses with the tools, insights, and strategies needed to achieve sustainable growth in an ever-changing marketplace.
+                We often see silos in an organization that all have an effect on revenues. Many times a department's goals are out of sync with other departments, creating inefficiencies and missed opportunities.
               </p>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                We believe that when departments work in harmony toward unified revenue goals, organizations unlock their true potential and create lasting competitive advantages.
+                Dakota has tools that help organizations coordinate the various silo activities and manage revenue. All activities from building a new store to investing in marketing and advertising requires clear knowledge and management of revenues.
               </p>
             </div>
             
-            <div className="bg-slate-50 p-8 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">Our Vision</h3>
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                To be the global leader in revenue optimization solutions, recognized for our innovative technology, proven methodologies, and commitment to client success.
-              </p>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">Our Approach</h3>
               <div className="space-y-3">
                 {[
-                  "Industry-leading innovation in revenue analytics",
-                  "Trusted partner for enterprise-scale transformations", 
-                  "Open-source pioneer in business systems",
-                  "Global standard for revenue optimization"
+                  "Identify departmental activities that affect revenue",
+                  "Measure competitor departments for intelligence", 
+                  "Coordinate organizational activities for revenue management",
+                  "Provide tools for ongoing departmental coordination"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-600 mr-3 flex-shrink-0" />
@@ -106,20 +120,20 @@ const About = () => {
       </section>
 
       {/* Company Stats */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Dakota by the Numbers
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our track record speaks to our commitment to delivering measurable results and exceptional value.
+              Our track record of helping organizations coordinate departmental activities and manage revenue.
             </p>
           </div>
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center bg-white p-6 rounded-lg shadow-sm">
+              <div key={index} className="text-center bg-slate-50 p-6 rounded-lg">
                 <div className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
                   {stat.number}
                 </div>
@@ -135,15 +149,15 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Values */}
-      <section className="py-20 bg-white">
+      {/* Core Values */}
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Core Values
+              How We Work
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These principles guide everything we do, from client relationships to technology development and team collaboration.
+              Our approach to helping organizations coordinate departmental activities and manage revenue effectively.
             </p>
           </div>
 
@@ -167,14 +181,14 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Leadership Team
+              Our Team
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the experienced professionals who drive Dakota Worldwide's vision and deliver exceptional results for our clients.
+              Experienced professionals who understand how to coordinate organizational activities for revenue management.
             </p>
           </div>
 
@@ -205,14 +219,14 @@ const About = () => {
       </section>
 
       {/* Company Timeline */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Journey
+              Our Development
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From startup to industry leader, discover the key milestones that have shaped Dakota Worldwide's growth and success.
+              Key milestones in developing tools for organizational coordination and revenue management.
             </p>
           </div>
 
@@ -239,14 +253,14 @@ const About = () => {
       </section>
 
       {/* Awards & Recognition */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Awards & Recognition
+              Recognition
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our commitment to excellence has been recognized by industry leaders and organizations worldwide.
+              Industry recognition for our tools and approach to organizational coordination.
             </p>
           </div>
 
@@ -271,10 +285,10 @@ const About = () => {
       <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Join Our Success Story?
+            Ready to Coordinate Your Organization?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover how Dakota Worldwide can help your organization break down silos and achieve unprecedented revenue optimization success.
+            Join organizations that use Dakota tools to coordinate departmental activities and manage revenue effectively.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -283,7 +297,7 @@ const About = () => {
               className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-6 text-lg"
             >
               <Link to="/contact">
-                Start Your Journey
+                Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -294,7 +308,7 @@ const About = () => {
               className="border-gray-300 text-white hover:bg-slate-800 px-8 py-6 text-lg"
             >
               <Link to="/services">
-                Explore Our Solutions
+                View Our Tools
               </Link>
             </Button>
           </div>

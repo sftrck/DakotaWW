@@ -22,13 +22,13 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge variant="secondary" className="mb-6">
-              Comprehensive Solutions
+              Departmental Coordination Tools
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Revenue Optimization Services
+              Tools for Managing Revenue Across Departments
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Our integrated suite of tools and services helps you break down organizational silos, coordinate departmental activities, and maximize revenue potential across all business channels.
+              All activities from building a new store to investing in marketing and advertising requires clear knowledge and management of revenues. Our tools help coordinate departmental activities that affect organizational revenue.
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ const Services = () => {
                     </p>
 
                     <div className="mb-8">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Benefits</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Results</h3>
                       <div className="space-y-3">
                         {service.benefits.map((benefit, idx) => (
                           <div key={idx} className="flex items-center">
@@ -85,9 +85,9 @@ const Services = () => {
                   <div className={`${!isEven ? 'lg:order-1' : ''}`}>
                     <Card className="border-0 shadow-lg">
                       <CardHeader>
-                        <CardTitle className="text-xl">Core Features</CardTitle>
+                        <CardTitle className="text-xl">Core Capabilities</CardTitle>
                         <CardDescription>
-                          Advanced capabilities that drive results
+                          Tools for coordinating departmental activities
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
@@ -109,15 +109,15 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Silo Problem Section */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Proven Implementation Process
+              Solving the Department Coordination Problem
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to revenue optimization that ensures successful deployment and measurable results.
+              Many times a department's goals are out of sync with other departments. Our tools help coordinate these various silo activities to manage revenue effectively.
             </p>
           </div>
 
@@ -125,23 +125,23 @@ const Services = () => {
             {[
               {
                 step: "01",
-                title: "Assessment",
-                description: "Comprehensive analysis of your current revenue operations and identification of optimization opportunities."
+                title: "Identify Silos",
+                description: "We help you identify where departments are working at cross-purposes and affecting overall revenue."
               },
               {
                 step: "02", 
-                title: "Strategy",
-                description: "Development of customized implementation strategy aligned with your business objectives and constraints."
+                title: "Measure Activities",
+                description: "Dakota measures virtually every department of every competitor to provide comparative intelligence."
               },
               {
                 step: "03",
-                title: "Deployment",
-                description: "Systematic rollout of Dakota systems with comprehensive training and support for your team."
+                title: "Coordinate Goals",
+                description: "Our tools help align departmental goals and coordinate activities for better revenue management."
               },
               {
                 step: "04",
-                title: "Optimization",
-                description: "Continuous monitoring, refinement, and optimization to maximize ROI and business impact."
+                title: "Manage Revenue",
+                description: "From site selection to marketing spend, coordinate all activities that affect organizational revenue."
               }
             ].map((item, index) => (
               <div key={index} className="text-center">
@@ -156,14 +156,71 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Competitive Analysis Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Measure Every Department of Every Competitor
+              </h2>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Dakota measures virtually every department of every competitor, providing detailed consumer perceptions and avenues for sales growth. This comprehensive intelligence helps coordinate your departmental responses.
+              </p>
+              <div className="space-y-4 mb-8">
+                {[
+                  "Competitor pricing and promotional strategies across departments",
+                  "Site selection and expansion patterns",
+                  "Marketing campaigns and customer targeting",
+                  "Operational changes and service modifications",
+                  "Cross-departmental competitive intelligence"
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <Button 
+                asChild
+                className="bg-slate-900 hover:bg-slate-800 text-white"
+              >
+                <Link to="/contact">
+                  Get Competitive Intelligence
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            
+            <div className="bg-slate-50 p-8 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">What We Monitor</h3>
+              <div className="space-y-3">
+                {[
+                  { department: "Pricing Departments", activity: "Rate changes, promotional strategies" },
+                  { department: "Marketing Teams", activity: "Campaign launches, targeting changes" },
+                  { department: "Operations", activity: "Service changes, capacity adjustments" },
+                  { department: "Real Estate", activity: "Location decisions, expansion plans" },
+                  { department: "Customer Service", activity: "Policy changes, service offerings" }
+                ].map((item, idx) => (
+                  <div key={idx} className="border-l-4 border-slate-300 pl-4">
+                    <h4 className="font-semibold text-gray-900">{item.department}</h4>
+                    <p className="text-gray-600 text-sm">{item.activity}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Transform Your Revenue Operations
+            Stop Letting Silos Hurt Your Revenue
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover how Dakota Worldwide's comprehensive suite of services can help your organization achieve unprecedented revenue growth and operational efficiency.
+            Get the tools you need to coordinate departmental activities and manage revenue across your entire organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -172,7 +229,7 @@ const Services = () => {
               className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-6 text-lg"
             >
               <Link to="/contact">
-                Schedule Consultation
+                Start Coordinating Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -183,7 +240,7 @@ const Services = () => {
               className="border-gray-300 text-white hover:bg-slate-800 px-8 py-6 text-lg"
             >
               <Link to="/tools">
-                View Technology Platform
+                View Our Technology
               </Link>
             </Button>
           </div>

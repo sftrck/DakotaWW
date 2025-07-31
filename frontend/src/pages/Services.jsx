@@ -109,7 +109,45 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Silo Problem Section */}
+      {/* McDonald's Credential Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-6">
+              Enterprise Validation
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Proven at McDonald's Scale
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our flagship tool, Quintillion, was originally developed at McDonald's - one of the world's largest retail operations. This enterprise-scale validation demonstrates our capability to handle complex organizational coordination challenges.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-md bg-white text-center">
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-slate-900 mb-2">Global Scale</div>
+                <div className="text-gray-600">Tested across McDonald's worldwide operations</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-md bg-white text-center">
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-slate-900 mb-2">Enterprise Proven</div>
+                <div className="text-gray-600">Validated by Fortune 500 operational complexity</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-md bg-white text-center">
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-slate-900 mb-2">Real-World Results</div>
+                <div className="text-gray-600">Not theoretical - proven in actual business environment</div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

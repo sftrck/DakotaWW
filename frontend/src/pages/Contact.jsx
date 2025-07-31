@@ -7,7 +7,7 @@ import { Label } from '../components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { Badge } from '../components/ui/badge';
 import { useToast } from '../hooks/use-toast';
-import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Calendar, Users } from 'lucide-react';
+import { Phone, Mail, Clock, Send, MessageSquare, Calendar, Users } from 'lucide-react';
 import { contactInfo } from '../data/mock';
 
 const Contact = () => {

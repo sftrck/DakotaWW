@@ -320,7 +320,7 @@ const Contact = () => {
                 <CardHeader>
                   <CardTitle className="text-xl">Office Locations</CardTitle>
                   <CardDescription>
-                    Multiple offices across Texas
+                    National presence across key markets
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -333,6 +333,7 @@ const Contact = () => {
                             {office.type}
                           </Badge>
                         </div>
+                        <p className="text-sm text-gray-500 mb-2">{office.description}</p>
                         <p className="text-sm text-gray-600 mb-1">
                           {office.address.street}, {office.address.suite}
                         </p>

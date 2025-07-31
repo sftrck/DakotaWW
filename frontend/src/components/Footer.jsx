@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, Linkedin, Twitter } from 'lucide-react';
 import { navigationItems, contactInfo } from '../data/mock';
 
 const Footer = () => {

@@ -6,8 +6,8 @@ export const companyInfo = {
   description: "We often see silos in an organization that all have an effect on revenues. Many times a department's goals are out of sync with other departments. Dakota has tools that help organizations coordinate the various silo activities and manage revenue.",
   founded: "2010",
   employees: "50+",
-  headquarters: "Austin, Texas",
-  credentials: "Proven at enterprise scale, including development work at McDonald's"
+  credentials: "Proven at enterprise scale, including development work at McDonald's",
+  presence: "Nationwide service delivery across all markets"
 };
 
 export const services = [

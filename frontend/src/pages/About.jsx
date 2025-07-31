@@ -100,13 +100,13 @@ const About = () => {
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">Our Approach</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">Our Credentials</h3>
               <div className="space-y-3">
                 {[
-                  "Identify departmental activities that affect revenue",
-                  "Measure competitor departments for intelligence", 
-                  "Coordinate organizational activities for revenue management",
-                  "Provide tools for ongoing departmental coordination"
+                  "Enterprise-scale development work at McDonald's",
+                  "Proven tools tested at Fortune 500 operational scale",
+                  "National presence across diverse regional markets", 
+                  "15+ years coordinating organizational silo activities"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-600 mr-3 flex-shrink-0" />

@@ -79,11 +79,9 @@ const Footer = () => {
                 <span className="text-gray-300">{contactInfo.email}</span>
               </div>
               <div className="flex items-start">
-                <MapPin className="h-4 w-4 mr-3 text-gray-400 mt-1" />
                 <div className="text-gray-300">
-                  <div>{contactInfo.address.street}</div>
-                  <div>{contactInfo.address.suite}</div>
-                  <div>{contactInfo.address.city}, {contactInfo.address.state} {contactInfo.address.zip}</div>
+                  <div className="text-sm">Nationwide presence</div>
+                  <div className="text-sm">Serving organizations across all markets</div>
                 </div>
               </div>
             </div>

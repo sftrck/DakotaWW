@@ -85,19 +85,20 @@ export const services = [
   {
     id: "quintillion",
     name: "Quintillion",
-    title: "Business Computer Modeling System",
-    description: "All activities from building a new store to investing in marketing and advertising requires clear knowledge and management of revenues. Quintillion provides comprehensive business modeling for complex organizational decisions.",
+    title: "Advanced Computer Modeling System (Developed at McDonald's)",
+    description: "Quintillion, originally developed at McDonald's, is our advanced computer model for retailers and consultants. All activities from building a new store to investing in marketing and advertising requires clear knowledge and management of revenues. Built and tested at McDonald's massive operational scale, Quintillion delivers proven results for complex organizational decisions.",
     features: [
-      "Multi-departmental business scenario modeling",
+      "Enterprise-scale business scenario modeling (McDonald's-proven)",
       "Revenue impact analysis across organizational silos",
       "Financial forecasting and planning tools",
       "Risk assessment and mitigation strategies",
-      "Cross-functional decision support systems"
+      "Cross-functional decision support systems",
+      "Scalable architecture tested at Fortune 500 level"
     ],
     benefits: [
-      "Improve decision accuracy by 55%",
+      "Improve decision accuracy by 55% with McDonald's-proven methodology",
       "Reduce planning time and departmental conflicts by 60%",
-      "Increase organizational coordination and agility"
+      "Increase organizational coordination with enterprise-grade tools"
     ]
   }
 ];

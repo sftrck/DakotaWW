@@ -86,41 +86,7 @@ const Contact = () => {
     }
   ];
 
-  const offices = [
-    {
-      city: "Austin, TX",
-      type: "Headquarters",
-      address: contactInfo.address,
-      phone: contactInfo.phone,
-      email: contactInfo.email
-    },
-    {
-      city: "Dallas, TX",
-      type: "Regional Office",
-      address: {
-        street: "5678 Corporate Blvd",
-        suite: "Suite 200",
-        city: "Dallas",
-        state: "TX",
-        zip: "75201"
-      },
-      phone: "+1 (214) 555-0200",
-      email: "dallas@dakotaworldwide.com"
-    },
-    {
-      city: "Houston, TX",
-      type: "Regional Office", 
-      address: {
-        street: "9012 Energy Corridor",
-        suite: "Suite 300",
-        city: "Houston",
-        state: "TX", 
-        zip: "77079"
-      },
-      phone: "+1 (713) 555-0300",
-      email: "houston@dakotaworldwide.com"
-    }
-  ];
+  const offices = officeLocations;
 
   return (
     <div className="min-h-screen">

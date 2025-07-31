@@ -68,8 +68,11 @@ const Tools = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Advanced Tools & Technology
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Powered by cutting-edge technology and open-source philosophy, our integrated platform delivers unprecedented insights and capabilities for revenue optimization.
+            <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
+              Powered by cutting-edge technology and proven at enterprise scale, our integrated platform delivers unprecedented insights and capabilities for revenue optimization.
+            </p>
+            <p className="text-lg text-gray-500 mb-8 max-w-3xl mx-auto">
+              Our flagship tool, Quintillion, was originally developed at McDonald's, demonstrating our capability to handle Fortune 500-scale operational complexity.
             </p>
             <Button 
               asChild

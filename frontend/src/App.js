@@ -9,6 +9,7 @@ import DataSolutions from "./pages/DataSolutions";
 import Training from "./pages/Training";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Downloads from "./pages/Downloads";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/training" element={<Training />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/downloads" element={<Downloads />} />
           </Routes>
         </Layout>
       </BrowserRouter>

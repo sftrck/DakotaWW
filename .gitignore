@@ -83,3 +83,7 @@ wordpress_backup/dakotaww_com.zip
 # Environment files
 *.env
 *.env.*
+-e 
+# Environment files
+*.env
+*.env.*

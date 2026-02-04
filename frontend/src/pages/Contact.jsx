@@ -7,7 +7,7 @@ import { Label } from '../components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { Badge } from '../components/ui/badge';
 import { useToast } from '../hooks/use-toast';
-import { Phone, Mail, Clock, Send, MessageSquare, Calendar, Users } from 'lucide-react';
+import { Phone, Mail, Clock, Send, MapPin } from 'lucide-react';
 import { contactInfo } from '../data/mock';
 
 const Contact = () => {
@@ -19,7 +19,6 @@ const Contact = () => {
     company: '',
     phone: '',
     inquiryType: '',
-    subject: '',
     message: ''
   });
 
@@ -32,13 +31,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Mock form submission
     toast({
       title: "Message Sent Successfully",
-      description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+      description: "Thank you for your inquiry. We'll get back to you soon.",
     });
     
-    // Reset form
     setFormData({
       firstName: '',
       lastName: '',
@@ -46,47 +43,20 @@ const Contact = () => {
       company: '',
       phone: '',
       inquiryType: '',
-      subject: '',
       message: ''
     });
   };
 
   const inquiryTypes = [
     "General Inquiry",
-    "Request Demo",
-    "Pricing Information",
-    "Technical Support",
-    "Partnership Opportunities", 
+    "Market Analysis",
+    "Site Location Study",
+    "Consumer Research",
+    "Strategic Planning",
+    "Product Demo Request",
     "Training Programs",
-    "Data Solutions",
-    "Consulting Services"
+    "Data Solutions"
   ];
-
-  const contactMethods = [
-    {
-      icon: MessageSquare,
-      title: "Chat with Sales",
-      description: "Get immediate answers to your questions",
-      action: "Start Chat",
-      available: "Available now"
-    },
-    {
-      icon: Calendar,
-      title: "Schedule Demo",
-      description: "See Dakota tools in action",
-      action: "Book Demo",
-      available: "Next available: Today"
-    },
-    {
-      icon: Users,
-      title: "Speak with Expert",
-      description: "Discuss your specific requirements",
-      action: "Request Call",
-      available: "Response within 2 hours"
-    }
-  ];
-
-
 
   return (
     <div className="min-h-screen">
@@ -95,50 +65,19 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge variant="secondary" className="mb-6">
-              Get In Touch
+              Contact Us
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Contact Dakota Worldwide
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Ready to transform your revenue operations? Our experts are here to help you understand how Dakota solutions can drive growth for your organization.
+              Contact us for market analysis, site location studies, consumer research, and strategic planning services.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Quick Contact Options */}
-      <section className="py-12 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6">
-            {contactMethods.map((method, index) => {
-              const Icon = method.icon;
-              return (
-                <Card key={index} className="border-0 shadow-md group hover:shadow-lg transition-all duration-300 cursor-pointer">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-200 transition-colors duration-300">
-                      <Icon className="h-6 w-6 text-slate-700" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{method.title}</h3>
-                    <p className="text-gray-600 mb-3 text-sm">{method.description}</p>
-                    <Badge variant="secondary" className="mb-3 text-xs">
-                      {method.available}
-                    </Badge>
-                    <Button 
-                      size="sm"
-                      className="w-full bg-slate-900 hover:bg-slate-800 text-white"
-                    >
-                      {method.action}
-                    </Button>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Main Contact Form */}
+      {/* Main Contact Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
@@ -192,7 +131,6 @@ const Contact = () => {
                           id="company"
                           value={formData.company}
                           onChange={(e) => handleInputChange('company', e.target.value)}
-                          required
                           className="mt-1"
                         />
                       </div>
@@ -225,17 +163,6 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <Label htmlFor="subject">Subject</Label>
-                      <Input
-                        id="subject"
-                        value={formData.subject}
-                        onChange={(e) => handleInputChange('subject', e.target.value)}
-                        required
-                        className="mt-1"
-                      />
-                    </div>
-
-                    <div>
                       <Label htmlFor="message">Message</Label>
                       <Textarea
                         id="message"
@@ -244,7 +171,7 @@ const Contact = () => {
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         required
                         className="mt-1"
-                        placeholder="Tell us about your needs and how we can help..."
+                        placeholder="Tell us about your project or inquiry..."
                       />
                     </div>
 
@@ -264,15 +191,15 @@ const Contact = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Get in Touch
+                Contact Information
               </h2>
               
-              {/* Primary Contact Info */}
-              <Card className="border-0 shadow-md mb-8">
+              {/* Elliott Olson Contact */}
+              <Card className="border-0 shadow-lg mb-6">
                 <CardHeader>
-                  <CardTitle className="text-xl">Contact Information</CardTitle>
+                  <CardTitle className="text-xl">{contactInfo.name}</CardTitle>
                   <CardDescription>
-                    Multiple ways to reach our team
+                    Chairman & CEO
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -280,7 +207,7 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-slate-600 mr-3" />
                     <div>
                       <p className="font-medium">{contactInfo.phone}</p>
-                      <p className="text-sm text-gray-600">Monday - Friday, {contactInfo.hours.weekdays}</p>
+                      <p className="text-sm text-gray-600">Toll Free: {contactInfo.tollFree}</p>
                     </div>
                   </div>
                   
@@ -288,7 +215,15 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-slate-600 mr-3" />
                     <div>
                       <p className="font-medium">{contactInfo.email}</p>
-                      <p className="text-sm text-gray-600">We respond within 24 hours</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <MapPin className="h-5 w-5 text-slate-600 mr-3 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Corporate Office</p>
+                      <p className="text-gray-600">{contactInfo.address.street}</p>
+                      <p className="text-gray-600">{contactInfo.address.city}, {contactInfo.address.state} {contactInfo.address.zip}</p>
                     </div>
                   </div>
                   
@@ -303,33 +238,26 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Business Information */}
+              {/* Services Available */}
               <Card className="border-0 shadow-md">
                 <CardHeader>
-                  <CardTitle className="text-xl">Nationwide Presence</CardTitle>
-                  <CardDescription>
-                    Serving organizations across all markets
-                  </CardDescription>
+                  <CardTitle className="text-xl">Services Available</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    <p className="text-gray-700">
-                      Dakota Worldwide serves organizations nationwide, providing revenue coordination solutions across diverse industries and markets.
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-center">
+                  <div className="space-y-3">
+                    {[
+                      "Market Analysis & Site Location Studies",
+                      "Consumer Research & Surveys",
+                      "Strategic Planning",
+                      "Mapping Services & Demographics",
+                      "Quintillion & Locus Pro Demonstrations",
+                      "Training & Support Programs"
+                    ].map((service, idx) => (
+                      <div key={idx} className="flex items-center">
                         <div className="w-2 h-2 bg-slate-400 rounded-full mr-3"></div>
-                        <span className="text-gray-700">Remote and on-site consulting available</span>
+                        <span className="text-gray-700">{service}</span>
                       </div>
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-slate-400 rounded-full mr-3"></div>
-                        <span className="text-gray-700">National client base across all industries</span>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-slate-400 rounded-full mr-3"></div>
-                        <span className="text-gray-700">Virtual collaboration and support</span>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -338,46 +266,80 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Industries Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Clients include the nation's greatest retailers, manufacturers, developers, bankers and health care providers.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              "Supermarkets & Grocery",
+              "Quick Serve Restaurants",
+              "Retail Petroleum",
+              "Drug Stores & Pharmacy",
+              "Banking & Financial",
+              "Mass Merchandising",
+              "Health Care Providers",
+              "Real Estate Developers",
+              "Manufacturers",
+              "Postal & Delivery",
+              "Food Cooperatives",
+              "Convenience Stores"
+            ].map((industry, idx) => (
+              <Card key={idx} className="border-0 shadow-sm bg-white">
+                <CardContent className="p-4 text-center">
+                  <span className="text-gray-700 font-medium">{industry}</span>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Common questions about Dakota Worldwide services and solutions.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                question: "How long does implementation typically take?",
-                answer: "Implementation timelines vary based on scope and complexity, but most clients see initial value within 4-6 weeks, with full deployment completed in 12-16 weeks."
+                question: "What types of market analysis do you provide?",
+                answer: "We provide Site Location Analysis, Sales Projections, Acquisition Analysis, Network Strategies, and Competitive Analysis services."
               },
               {
-                question: "Do you offer training for our team?",
-                answer: "Yes, we provide comprehensive training programs including online courses, on-site workshops, and certification programs for all Dakota systems."
+                question: "What is Quintillion and how was it developed?",
+                answer: "Quintillion is a Decision Support and Executive Information System that was originally developed at McDonald's Corporation. Dakota obtained ownership in 1994 and has since moved it to the PC platform."
               },
               {
-                question: "What industries do you serve?",
-                answer: "We primarily serve retail, hospitality, healthcare, and service industries, with expertise in both B2B and B2C revenue optimization."
+                question: "What industries do you specialize in?",
+                answer: "We serve retailers, manufacturers, developers, bankers, health care providers, and have specialized tools for supermarkets, quick serve restaurants, retail petroleum, and pharmacy/drug stores."
               },
               {
-                question: "Can Dakota systems integrate with our existing tools?",
-                answer: "Absolutely. Our platform supports integration with most major CRM, ERP, and analytics platforms including Salesforce, SAP, Microsoft Dynamics, and more."
+                question: "Do you provide training for your software products?",
+                answer: "Yes, we offer training programs including the annual Locus Professional Conference and customized training for Quintillion and other Dakota systems."
               },
               {
-                question: "What support options are available?",
-                answer: "We offer 24/7 technical support, dedicated customer success managers, regular health checks, and ongoing optimization consulting."
+                question: "What data sources do your systems use?",
+                answer: "All of Dakota's modeling systems are enhanced by Synergos Technologies data sets including PopStats, LandScape, WorkPlace, and Spending Patterns data."
               },
               {
-                question: "How do you ensure data security?",
-                answer: "We maintain SOC 2 compliance, use bank-level encryption, and follow strict data governance protocols to ensure your information remains secure."
+                question: "How long has Dakota Worldwide been in business?",
+                answer: "Dakota Worldwide was originally founded as Retail Systems in 1975 by Elliott W. Olson, giving us over 50 years of experience in market analysis and site location."
               }
             ].map((faq, index) => (
-              <Card key={index} className="border-0 shadow-md bg-white">
+              <Card key={index} className="border-0 shadow-md bg-slate-50">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
                   <p className="text-gray-600 leading-relaxed">{faq.answer}</p>

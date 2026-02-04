@@ -20,12 +20,12 @@ const Home = () => {
               Organizational Coordination Solutions
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Coordinate Silo Activities,
+              Analysis of Return &
               <br />
-              <span className="text-slate-700">Manage Revenue</span>
+              <span className="text-slate-700">Quantification of Risk</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We often see silos in an organization that all have an effect on revenues. Many times a department's goals are out of sync with other departments. Dakota has tools that help organizations coordinate the various silo activities and manage revenue.
+              {companyInfo.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 

@@ -3,58 +3,18 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge'; 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { ArrowRight, Zap, Cloud, Shield, Smartphone, Globe, BarChart } from 'lucide-react';
-import { services } from '../data/mock';
+import { ArrowRight, Monitor, Map, Database, FileText, Download } from 'lucide-react';
+import { products, dataProducts } from '../data/mock';
 
 const Tools = () => {
-  const techFeatures = [
-    {
-      icon: Cloud,
-      title: "Cloud-Native Architecture",
-      description: "Scalable, secure cloud infrastructure with 99.9% uptime guarantee and enterprise-grade security."
-    },
-    {
-      icon: Zap,
-      title: "Real-Time Analytics",
-      description: "Process millions of data points instantly with advanced algorithms and machine learning capabilities."
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level encryption, SOC 2 compliance, and comprehensive data protection protocols."
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Responsive",
-      description: "Access all Dakota tools from any device with our responsive web applications and mobile interfaces."
-    },
-    {
-      icon: Globe,
-      title: "Global Deployment",
-      description: "Multi-region deployment capabilities with localized data processing and compliance standards."
-    },
-    {
-      icon: BarChart,
-      title: "Advanced Reporting",
-      description: "Customizable dashboards, automated reports, and interactive visualizations for data-driven decisions."
-    }
-  ];
-
-  const integrations = [
-    { name: "Salesforce", category: "CRM" },
-    { name: "Microsoft Dynamics", category: "ERP" },
-    { name: "SAP", category: "Enterprise" },
-    { name: "Oracle", category: "Database" },
-    { name: "Tableau", category: "Analytics" },
-    { name: "Power BI", category: "Business Intelligence" },
-    { name: "AWS", category: "Cloud" },
-    { name: "Azure", category: "Cloud" },
-    { name: "Google Cloud", category: "Cloud" },
-    { name: "Shopify", category: "E-commerce" },
-    { name: "Magento", category: "E-commerce" },
-    { name: "HubSpot", category: "Marketing" }
-  ];
+  const productIcons = {
+    'quintillion': Monitor,
+    'locus-pro': Map,
+    'qsl': Map,
+    'octane': Database,
+    'shipping': FileText,
+    'locuspharm': Map
+  };
 
   return (
     <div className="min-h-screen">
@@ -63,118 +23,184 @@ const Tools = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge variant="secondary" className="mb-6">
-              Enterprise Technology Platform
+              Dakota Products
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Advanced Tools & Technology
+              Decision Support Software
             </h1>
             <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
-              Powered by cutting-edge technology and proven at enterprise scale, our integrated platform delivers unprecedented insights and capabilities for revenue optimization.
+              Dakota has internally developed decision support software including Quintillion - a geographical executive information system developed at McDonald's, Locus Pro, and specialized site location systems for various industries.
             </p>
-            <p className="text-lg text-gray-500 mb-8 max-w-3xl mx-auto">
-              Our flagship tool, Quintillion, was originally developed at McDonald's, demonstrating our capability to handle Fortune 500-scale operational complexity.
-            </p>
-            <Button 
-              asChild
-              size="lg"
-              className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-6 text-lg"
-            >
-              <Link to="/contact">
-                Request Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>  
-            </Button>
           </div>
         </div>
       </section>
 
-      {/* Tools Overview */}
+      {/* Quintillion Feature Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Tabs defaultValue="locus" className="w-full">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Technology Suite
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <Badge variant="secondary" className="mb-4">
+                Developed at McDonald's
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Quintillion 4.50
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Explore each component of our integrated platform designed to optimize different aspects of your revenue operations.
+              <p className="text-lg text-gray-600 mb-4">
+                The Ultimate Decision Support System
+              </p>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                {products.find(p => p.id === 'quintillion')?.description}
+              </p>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                {products.find(p => p.id === 'quintillion')?.history}
               </p>
               
-              <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-2 lg:grid-cols-5">
-                {services.map((service) => (
-                  <TabsTrigger key={service.id} value={service.id} className="text-sm">
-                    {service.name}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
-
-            {services.map((service) => (
-              <TabsContent key={service.id} value={service.id} className="mt-8">
-                <Card className="border-0 shadow-lg">
-                  <CardHeader className="text-center pb-6">
-                    <CardTitle className="text-2xl font-bold">{service.name}</CardTitle>
-                    <CardDescription className="text-lg">{service.title}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid lg:grid-cols-2 gap-8">
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Overview</h3>
-                        <p className="text-gray-700 mb-6 leading-relaxed">{service.description}</p>
-                        
-                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Benefits</h3>
-                        <div className="space-y-3">
-                          {service.benefits.map((benefit, idx) => (
-                            <div key={idx} className="flex items-center">
-                              <div className="w-2 h-2 bg-slate-400 rounded-full mr-3"></div>
-                              <span className="text-gray-700">{benefit}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Technical Features</h3>
-                        <div className="space-y-4">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className="bg-slate-50 p-4 rounded-lg">
-                              <span className="text-gray-700">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Quintillion can be used as:</h3>
+                <div className="space-y-3">
+                  {products.find(p => p.id === 'quintillion')?.uses.map((use, idx) => (
+                    <div key={idx} className="flex items-start">
+                      <div className="w-2 h-2 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">{use}</span>
                     </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            ))}
-          </Tabs>
+                  ))}
+                </div>
+              </div>
+
+              <Button 
+                asChild
+                className="bg-slate-900 hover:bg-slate-800 text-white"
+              >
+                <Link to="/contact">
+                  Request Demo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            
+            <div>
+              <Card className="border-0 shadow-lg mb-6">
+                <CardHeader>
+                  <CardTitle className="text-xl">Information Sources</CardTitle>
+                  <CardDescription>
+                    Quintillion provides access to a variety of information sources
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-2 gap-3">
+                    {products.find(p => p.id === 'quintillion')?.dataSources.map((source, idx) => (
+                      <div key={idx} className="bg-slate-50 p-3 rounded-lg text-sm text-gray-700">
+                        {source}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-xl">System Components</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    {products.find(p => p.id === 'quintillion')?.components.map((component, idx) => (
+                      <div key={idx} className="flex items-center p-3 bg-slate-50 rounded-lg">
+                        <Monitor className="h-5 w-5 text-slate-600 mr-3" />
+                        <span className="text-gray-700 font-medium">{component}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Technology Features */}
-      <section className="py-20 bg-slate-50">
+      {/* Locus Pro Section */}
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="lg:order-2">
+              <Badge variant="secondary" className="mb-4">
+                Since 1975
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Locus Pro
+              </h2>
+              <p className="text-lg text-gray-600 mb-4">
+                Supermarket Site Location System
+              </p>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                {products.find(p => p.id === 'locus-pro')?.description}
+              </p>
+              <p className="text-gray-700 mb-6 leading-relaxed italic">
+                "{products.find(p => p.id === 'locus-pro')?.history}"
+              </p>
+              <p className="text-gray-600 mb-6 text-sm">
+                {products.find(p => p.id === 'locus-pro')?.credits}
+              </p>
+
+              <Button 
+                asChild
+                className="bg-slate-900 hover:bg-slate-800 text-white"
+              >
+                <Link to="/contact">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            
+            <div className="lg:order-1">
+              <Card className="border-0 shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-xl">Locus Features</CardTitle>
+                  <CardDescription>
+                    Advanced gravity modeling and analysis
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    {products.find(p => p.id === 'locus-pro')?.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start p-3 bg-slate-50 rounded-lg">
+                        <Map className="h-5 w-5 text-slate-600 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Other Products */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Enterprise-Grade Technology
+              Specialized Site Location Systems
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built with modern architecture and best practices to deliver superior performance, security, and scalability.
+              Industry-specific solutions for various retail and service sectors
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {techFeatures.map((feature, index) => {
-              const Icon = feature.icon;
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {products.filter(p => !['quintillion', 'locus-pro'].includes(p.id)).map((product) => {
+              const Icon = productIcons[product.id] || Map;
               return (
-                <Card key={index} className="border-0 shadow-md bg-white group hover:shadow-lg transition-all duration-300">
+                <Card key={product.id} className="border-0 shadow-md hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-slate-200 transition-colors duration-300">
+                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
                       <Icon className="h-6 w-6 text-slate-700" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.name}</h3>
+                    <p className="text-sm text-gray-600 mb-3">{product.title}</p>
+                    <p className="text-gray-700 text-sm">{product.description}</p>
                   </CardContent>
                 </Card>
               );
@@ -183,112 +209,38 @@ const Tools = () => {
         </div>
       </section>
 
-      {/* Integration Section */}
-      <section className="py-20 bg-white">
+      {/* Data Products */}
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Seamless Integrations
+              Enhanced by Synergos Technologies Data
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Connect Dakota tools with your existing technology stack through our comprehensive integration capabilities.
+              All of Dakota's modeling systems are enhanced by the use of Synergos Technologies data sets
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => (
-              <Card key={index} className="border-0 shadow-sm bg-slate-50 hover:shadow-md transition-all duration-300">
-                <CardContent className="p-4 text-center">
-                  <div className="font-semibold text-gray-900 mb-1">{integration.name}</div>
-                  <Badge variant="secondary" className="text-xs">
-                    {integration.category}
-                  </Badge>
+          <div className="grid md:grid-cols-2 gap-6">
+            {dataProducts.map((data, index) => (
+              <Card key={index} className="border-0 shadow-md">
+                <CardContent className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">{data.name}</h3>
+                      <p className="text-sm text-gray-500">{data.provider}</p>
+                    </div>
+                    {data.updateFrequency && (
+                      <Badge variant="secondary">{data.updateFrequency}</Badge>
+                    )}
+                  </div>
+                  <p className="text-gray-700">{data.description}</p>
+                  {data.details && (
+                    <p className="text-gray-600 text-sm mt-3 italic">{data.details}</p>
+                  )}
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">
-              Don't see your system? We support custom integrations and API connections.
-            </p>
-            <Button 
-              asChild
-              variant="outline"
-              className="border-slate-300 text-slate-700 hover:bg-slate-50"
-            >
-              <Link to="/contact">
-                Discuss Custom Integration
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Open Source Philosophy */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Open Source Philosophy
-              </h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                At Dakota Worldwide, we believe in the power of open collaboration and transparency. Our open-source approach to business systems ensures you're never locked into proprietary solutions.
-              </p>
-              <div className="space-y-4 mb-8">
-                {[
-                  "Full access to system code and methodologies",
-                  "Customizable solutions that grow with your business",
-                  "Community-driven improvements and innovations",
-                  "No vendor lock-in or proprietary restrictions"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center">
-                    <div className="w-2 h-2 bg-slate-400 rounded-full mr-3"></div>
-                    <span className="text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <Button 
-                asChild
-                className="bg-slate-900 hover:bg-slate-800 text-white"
-              >
-                <Link to="/about">
-                  Learn About Our Approach
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Leasing Options Available</h3>
-              <p className="text-gray-700 mb-6">
-                Make Dakota tools accessible to your organization with flexible leasing options designed for retailers and consultants.
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Basic Package</span>
-                  <span className="font-semibold">Starting at $2,500/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Professional Package</span>
-                  <span className="font-semibold">Starting at $7,500/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Enterprise Package</span>
-                  <span className="font-semibold">Custom pricing</span>
-                </div>
-              </div>
-              <Button 
-                asChild
-                size="sm"
-                className="w-full bg-slate-900 hover:bg-slate-800 text-white"
-              >
-                <Link to="/contact">
-                  Get Pricing Quote
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -297,10 +249,10 @@ const Tools = () => {
       <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Experience Dakota Technology
+            Request a Product Demonstration
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            See our tools in action with a personalized demo tailored to your business needs and objectives.
+            See our decision support software in action with a personalized demonstration tailored to your industry and business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -320,7 +272,7 @@ const Tools = () => {
               className="border-gray-300 text-white hover:bg-slate-800 px-8 py-6 text-lg"
             >
               <Link to="/services">
-                Explore Services
+                View Services
               </Link>
             </Button>
           </div>

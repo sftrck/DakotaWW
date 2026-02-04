@@ -30,8 +30,9 @@ next-env.d.ts
 dist/
 dist
 
-# Environment files (comprehensive coverage)
-
+# Environment files
+*.env
+*.env.*
 *token.json*
 *credentials.json*
 
@@ -77,13 +78,8 @@ agenthub/agents/youtube/db
 .cache/
 
 # Mobile development
-android-sdk/ wordpress_backup/dakotaww_com.zip
-wordpress_backup/dakotaww_com.zip
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
+android-sdk/
+
+# WordPress backup (contains sensitive data)
+wordpress_backup/
+*.sql

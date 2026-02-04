@@ -83,3 +83,7 @@ android-sdk/
 # WordPress backup (contains sensitive data)
 wordpress_backup/
 *.sql
+-e 
+# Environment files
+*.env
+*.env.*

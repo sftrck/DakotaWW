@@ -62,6 +62,34 @@ A complete, multi-page, frontend-only React application for the Dakota Worldwide
 - ✅ About - Company history, team, and industries served
 - ✅ Contact - Real contact information and address
 - ✅ Footer - Updated with authentic contact details
+- ✅ Downloads - NEW PAGE with 14 downloadable PDFs from original site
+
+### Downloads Page (NEW)
+All original PDF documents have been extracted and made available:
+
+**Locus Pro Documentation:**
+- Locus ProView Quick Guide (367 KB)
+- Locus ProView Quick Guide Jan 2011 (559 KB)
+- Locus 2000 R2 Manual (5.8 MB)
+
+**Conference Materials:**
+- Locus Conference June 2016 (56 KB)
+- 2015 Locus Conference Agenda (17 KB)
+- 2015 Locus Agenda Letter (196 KB)
+- Locus Conference Registration Form (17 KB)
+
+**Research & Reports:**
+- Center Store 2000 - Syndicated Study (1.2 MB)
+- Grocery Food Deserts 2010 (10 KB)
+
+**Product Updates:**
+- New Features December 2001 (2.2 MB)
+- New Features February 2001 (127 KB)
+- New Features October 2000 (202 KB)
+- New Features August 2000 (137 KB)
+
+**Forms:**
+- Order Form (103 KB)
 
 ## Technical Architecture
 ```

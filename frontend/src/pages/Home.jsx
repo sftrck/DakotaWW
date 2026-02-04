@@ -86,10 +86,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Tools for Coordinating Organizational Activities
+              Decision Support Software
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              All activities from building a new store to investing in marketing and advertising requires clear knowledge and management of revenues. Our tools help coordinate these various departmental activities, including Quintillion - originally developed at McDonald's.
+              Dakota has internally developed decision support software including Quintillion - a geographical executive information system developed at McDonald's, Locus Pro - a supermarket site location system, and specialized tools for restaurants, petroleum, pharmacy, and delivery systems.
             </p>
           </div>
 

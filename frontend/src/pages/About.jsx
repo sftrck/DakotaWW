@@ -3,49 +3,32 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
-import { ArrowRight, Award, Target, Users, Lightbulb, CheckCircle } from 'lucide-react';
-import { companyInfo, teamMembers, stats } from '../data/mock';
+import { ArrowRight, Award, Target, Users, Lightbulb, CheckCircle, Mail, Phone } from 'lucide-react';
+import { companyInfo, teamMembers, stats, industries, pressReleases } from '../data/mock';
 import QuoteComponent from '../components/QuoteComponent';
 
 const About = () => {
   const values = [
     {
       icon: Target,
-      title: "Practical Solutions",
-      description: "We provide straightforward tools that solve real departmental coordination problems affecting revenue."
+      title: "Field Work by Professionals",
+      description: "Our analyst/consultants personally perform field work to ensure accurate, firsthand market intelligence."
     },
     {
       icon: Users,
-      title: "Coordination Focus", 
-      description: "Our primary goal is helping departments work together rather than at cross-purposes."
+      title: "Client Partnership", 
+      description: "Strategic Planning requires confidential sharing of information and close working relationships."
     },
     {
       icon: Lightbulb,
-      title: "Clear Intelligence",
-      description: "We measure competitor activities across all departments to provide actionable business intelligence."
+      title: "Innovative Tools",
+      description: "Continuously enhanced software since 1975, including Quintillion developed at McDonald's."
     },
     {
       icon: Award,
-      title: "Proven Results",
-      description: "Organizations use our tools to successfully coordinate activities and manage revenue more effectively."
+      title: "Proven Methodology",
+      description: "Proprietary bottom-up methodology for greater accuracy in population estimates and market analysis."
     }
-  ];
-
-  const milestones = [
-    { year: "2010", event: "Founded with National Vision", description: "Started with a focus on helping organizations coordinate departmental activities" },
-    { year: "2012", event: "McDonald's Development Work", description: "Developed Quintillion computer modeling system during enterprise consulting at McDonald's" },
-    { year: "2015", event: "Major Retail Clients", description: "Expanded client base with organizations needing cross-departmental coordination" },
-    { year: "2018", event: "National Market Expansion", description: "Expanded service delivery to serve clients across diverse regional markets nationwide" },
-    { year: "2020", event: "Enhanced Competitor Monitoring", description: "Expanded capability to measure virtually every department of every competitor" },
-    { year: "2022", event: "Comprehensive Platform", description: "Full suite of tools for coordinating organizational silo activities" },
-    { year: "2024", event: "Proven Track Record", description: "500+ organizations successfully coordinating activities with Dakota tools" }
-  ];
-
-  const awards = [
-    { title: "Best Revenue Coordination Platform", organization: "Retail Analytics Awards", year: "2023" },
-    { title: "Innovation in Departmental Coordination", organization: "Austin Business Excellence", year: "2023" },
-    { title: "Top Business Intelligence Provider", organization: "Revenue Management Institute", year: "2022" },
-    { title: "Excellence in Organizational Solutions", organization: "Business Software Review", year: "2022" }
   ];
 
   return (
@@ -55,13 +38,13 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge variant="secondary" className="mb-6">
-              {companyInfo.founded} - Present
+              Since {companyInfo.founded}
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About Dakota Worldwide
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              {companyInfo.description} For over a decade, we've been helping organizations solve the fundamental problem of departmental silos affecting revenue.
+              {companyInfo.description}
             </p>
           </div>
         </div>
@@ -70,47 +53,46 @@ const About = () => {
       {/* Bob Dylan Quote Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <QuoteComponent className="mb-16" />
-          
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Adapting to Organizational Change
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              In rapidly changing business environments, organizations that can coordinate their departmental activities succeed. Those with departments working in silos struggle with revenue management and fall behind.
-            </p>
-          </div>
+          <QuoteComponent className="mb-8" />
         </div>
       </section>
 
-      {/* Mission & Problem Statement */}
+      {/* Company Overview */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                The Silo Problem
+                Marketing Research Consulting Group
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                We often see silos in an organization that all have an effect on revenues. Many times a department's goals are out of sync with other departments, creating inefficiencies and missed opportunities.
+                Dakota Worldwide Corporation is a marketing research consulting group comprised of professionals who have spent their careers in the areas of marketing, retail operations, research, training, management, strategic planning, and site location.
               </p>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Dakota has tools that help organizations coordinate the various silo activities and manage revenue. All activities from building a new store to investing in marketing and advertising requires clear knowledge and management of revenues.
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Many of the key members of the corporation, both management and consultants, have worked closely together as a group for many years. {companyInfo.founder}, the Chairman of Dakota Worldwide, originally founded Retail Systems in {companyInfo.founded}.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Projects include determining sales projections for stores and networks, macro overviews for planning and expert testimony.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">Our Credentials</h3>
-              <div className="space-y-3">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">Decision Support Software</h3>
+              <p className="text-gray-700 mb-6">
+                Dakota has internally developed decision support software including:
+              </p>
+              <div className="space-y-3 mb-6">
                 {[
-                  "Enterprise-scale development work at McDonald's",
-                  "Proven tools tested at Fortune 500 operational scale",
-                  "National presence across diverse regional markets", 
-                  "15+ years coordinating organizational silo activities"
+                  "Quintillion - geographical executive information system (developed at McDonald's)",
+                  "Locus Pro - supermarket site location system",
+                  "QSL - quick serve restaurant site location system",
+                  "Octane - network planning for retail petroleum",
+                  "Shipping - postal & overnight delivery systems",
+                  "LocusPharm - drug store site location system"
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-600 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
+                  <div key={idx} className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">{item}</span>
                   </div>
                 ))}
               </div>
@@ -126,9 +108,6 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Dakota by the Numbers
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our track record of helping organizations coordinate departmental activities and manage revenue.
-            </p>
           </div>
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -149,16 +128,39 @@ const About = () => {
         </div>
       </section>
 
+      {/* Industries Served */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Clients include the nation's greatest retailers, manufacturers, developers, bankers and health care providers.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {industries.map((industry, index) => (
+              <Badge 
+                key={index} 
+                variant="secondary" 
+                className="text-base px-4 py-2"
+              >
+                {industry}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Core Values */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How We Work
+              Our Approach
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our approach to helping organizations coordinate departmental activities and manage revenue effectively.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -181,35 +183,52 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Team
+              Leadership
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experienced professionals who understand how to coordinate organizational activities for revenue management.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <Card key={index} className="border-0 shadow-md bg-white">
-                <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 bg-slate-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-slate-700">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-slate-600 mb-3">{member.title}</p>
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">{member.bio}</p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {member.expertise.slice(0, 2).map((skill, idx) => (
-                      <Badge key={idx} variant="secondary" className="text-xs">
-                        {skill}
-                      </Badge>
-                    ))}
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 bg-slate-200 rounded-full flex-shrink-0 flex items-center justify-center">
+                      <span className="text-xl font-bold text-slate-700">
+                        {member.name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                      <p className="text-slate-600 mb-3">{member.title}</p>
+                      <p className="text-sm text-gray-600 leading-relaxed mb-4">{member.bio}</p>
+                      
+                      {member.contact && (
+                        <div className="space-y-1 text-sm">
+                          <div className="flex items-center text-gray-600">
+                            <Phone className="h-4 w-4 mr-2" />
+                            {member.contact.phone}
+                          </div>
+                          <div className="flex items-center text-gray-600">
+                            <Mail className="h-4 w-4 mr-2" />
+                            {member.contact.email}
+                          </div>
+                        </div>
+                      )}
+                      
+                      {member.expertise && (
+                        <div className="flex flex-wrap gap-2 mt-3">
+                          {member.expertise.map((skill, idx) => (
+                            <Badge key={idx} variant="secondary" className="text-xs">
+                              {skill}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -218,62 +237,22 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Timeline */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Development
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Key milestones in developing tools for organizational coordination and revenue management.
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-slate-300"></div>
-            <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="relative flex items-start">
-                  <div className="absolute left-0 w-8 h-8 bg-slate-900 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm font-bold">{index + 1}</span>
-                  </div>
-                  <div className="ml-12">
-                    <div className="flex items-center mb-2">
-                      <Badge variant="outline" className="mr-3">{milestone.year}</Badge>
-                      <h3 className="text-lg font-semibold text-gray-900">{milestone.event}</h3>
-                    </div>
-                    <p className="text-gray-600">{milestone.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Awards & Recognition */}
+      {/* News Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Recognition
+              News & Updates
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Industry recognition for our tools and approach to organizational coordination.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {awards.map((award, index) => (
-              <Card key={index} className="border-0 shadow-md bg-white text-center">
+          <div className="grid md:grid-cols-3 gap-6">
+            {pressReleases.map((news, index) => (
+              <Card key={index} className="border-0 shadow-md">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="h-6 w-6 text-yellow-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{award.title}</h3>
-                  <p className="text-sm text-gray-600 mb-1">{award.organization}</p>
-                  <Badge variant="secondary" className="text-xs">{award.year}</Badge>
+                  <Badge variant="secondary" className="mb-3">{news.date}</Badge>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{news.title}</h3>
+                  <p className="text-gray-600 text-sm">{news.summary}</p>
                 </CardContent>
               </Card>
             ))}
@@ -285,10 +264,10 @@ const About = () => {
       <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Coordinate Your Organization?
+            Contact Dakota Worldwide
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join organizations that use Dakota tools to coordinate departmental activities and manage revenue effectively.
+            Let's discuss how our market analysis and research services can help your business make confident investment decisions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -297,7 +276,7 @@ const About = () => {
               className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-6 text-lg"
             >
               <Link to="/contact">
-                Get Started
+                Contact Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -308,7 +287,7 @@ const About = () => {
               className="border-gray-300 text-white hover:bg-slate-800 px-8 py-6 text-lg"
             >
               <Link to="/services">
-                View Our Tools
+                View Services
               </Link>
             </Button>
           </div>

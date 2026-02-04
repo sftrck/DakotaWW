@@ -341,6 +341,7 @@ export const navigationItems = [
   { name: "Products", path: "/tools" },
   { name: "Data Solutions", path: "/data" },
   { name: "Training", path: "/training" },
+  { name: "Downloads", path: "/downloads" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" }
 ];
